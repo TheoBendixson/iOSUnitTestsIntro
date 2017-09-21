@@ -18,9 +18,9 @@ class PokemonTests: XCTestCase {
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    squirtle = Pokemon(type: .Water, attackType: .Water)
-    charmander = Pokemon(type: .Fire, attackType: .Fire)
-    psyduck = Pokemon(type: .Water, attackType: .Water)
+    squirtle = Pokemon(type: .water, attackType: .water)
+    charmander = Pokemon(type: .fire, attackType: .fire)
+    psyduck = Pokemon(type: .water, attackType: .water)
   }
   
   override func tearDown() {

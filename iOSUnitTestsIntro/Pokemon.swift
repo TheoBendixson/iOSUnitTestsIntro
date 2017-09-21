@@ -23,11 +23,11 @@ class Pokemon {
     
     var damage = 30
     
-    if enemy.type == .Fire && attackType == .Water{
+    if enemy.type == .fire && attackType == .water{
       damage = 60
     }
     
-    if enemy.type == .Water && attackType == .Fire{
+    if enemy.type == .water && attackType == .fire{
       damage = 10
     }
     
@@ -36,13 +36,13 @@ class Pokemon {
 }
 
 enum PokemonType{
-  case Neutral
-  case Fire
-  case Water
+  case neutral
+  case fire
+  case water
 }
 
 enum PokemonAttackType{
-  case Normal
-  case Fire
-  case Water
+  case normal
+  case fire
+  case water
 }
