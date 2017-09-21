@@ -8,44 +8,41 @@
 
 import Foundation
 
-class Pokemon{
+class Pokemon {
+  
+  var type: PokemonType
+  var attackType: PokemonAttackType
+  var health:Int = 100
+  
+  init(type: PokemonType, attackType: PokemonAttackType) {
+    self.type = type
+    self.attackType = attackType
+  }
+  
+  func attack(enemy: Pokemon) {
     
-    var type:PokemonType
-    var attackType:PokemonAttackType
-    var health:Int = 100
+    var damage = 30
     
-    init(type:PokemonType, attackType:PokemonAttackType){
-        self.type = type
-        self.attackType = attackType
+    if enemy.type == .Fire && attackType == .Water{
+      damage = 60
     }
     
-    func attack(enemy:Pokemon){
-    
-        var damage = 30
-        
-        if enemy.type == .Fire && attackType == .Water{
-            damage = 60
-        }
-        
-        if enemy.type == .Water && attackType == .Fire{
-            damage = 10
-        }
-        
-        enemy.health = enemy.health - damage
-    
+    if enemy.type == .Water && attackType == .Fire{
+      damage = 10
     }
     
-    
+    enemy.health = enemy.health - damage
+  }
 }
 
 enum PokemonType{
-    case Neutral
-    case Fire
-    case Water
+  case Neutral
+  case Fire
+  case Water
 }
 
 enum PokemonAttackType{
-    case Normal
-    case Fire
-    case Water
+  case Normal
+  case Fire
+  case Water
 }
